@@ -1,5 +1,5 @@
 calander = int(input("Enter:\n1.Convert GC to EC\n2.Convert EC to GC: \nchoice: "))
-
+#first commit
 if calander == 1:
     gc_year = int(input("Enter the Gregorian year: "))
     gc_month = int(input("Enter the Gregorian month (1-12): "))
