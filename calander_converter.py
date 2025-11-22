@@ -25,6 +25,9 @@ if calander == 1:
     if gc_month < 1 or gc_month > 12:
         flag = True
         print("Invalid month for Gregorian calendar.")
+    elif gc_month in [4, 6, 9, 11] and gc_day > 30:
+        flag = True
+        print("Invalid day for Gregorian calendar.")
     elif (gc_month == 9 and gc_day == 11) and ((gc_year + 1) % 4 == 0 and ((gc_year + 1) % 100 != 0 or (gc_year + 1) % 400 == 0)):
         ec_month = 13
     elif (gc_month == 9 and gc_day >= 11) or (gc_month == 10 and gc_day <= 10):
