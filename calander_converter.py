@@ -7,9 +7,15 @@ flag = False
 
 #GC to EC conversion
 if calander == 1:
-    gc_year = int(input("Enter the Gregorian year: "))
-    gc_month = int(input("Enter the Gregorian month (1-12): "))
-    gc_day = int(input("Enter the Gregorian day: "))
+    gc_input = input("Enter the Gregorian date in this format dd/mm/yyyy: ")
+
+    # Split the date into day, month, year
+    gc_day, gc_month, gc_year = gc_input.split("/")
+
+    # Convert them to integers
+    gc_day = int(gc_day)
+    gc_month = int(gc_month)
+    gc_year = int(gc_year)
 
     #year conversion
     if gc_year < 1:
@@ -129,10 +135,15 @@ if calander == 1:
 #EC to GC conversion
 
 elif calander == 2:
-    ec_year = int(input("Enter the Ethiopian year: "))
-    ec_month = int(input("Enter the Ethiopian month (1-13): "))
-    ec_day = int(input("Enter the Ethiopian day: "))
+    ec_input = input("Enter the Ethiopian date in this format dd/mm/yyyy: ")
 
+    # Split the date
+    ec_day, ec_month, ec_year = ec_input.split("/")
+
+    # Convert to integers
+    ec_day = int(ec_day)
+    ec_month = int(ec_month)
+    ec_year = int(ec_year)
     #year conversion
 
     if ec_year < 1:
