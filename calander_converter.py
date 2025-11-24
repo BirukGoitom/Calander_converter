@@ -1,12 +1,12 @@
 #Ethiopian and Gregorian Calendar Converter
 
-calander = int(input("Enter:\n1.Convert GC to EC\n2.Convert EC to GC: \nchoice: "))
+calander = input("Enter:\nA.Convert GC to EC\nB.Convert EC to GC: \nchoice: ")
 
 flag = False
 
 
 #GC to EC conversion
-if calander == 1:
+if calander == "A":
     gc_input = input("Enter the Gregorian date in this format dd/mm/yyyy: ")
 
     # Split the date into day, month, year
@@ -134,7 +134,7 @@ if calander == 1:
 
 #EC to GC conversion
 
-elif calander == 2:
+elif calander == "B":
     ec_input = input("Enter the Ethiopian date in this format dd/mm/yyyy: ")
 
     # Split the date
@@ -260,5 +260,5 @@ elif calander == 2:
     if flag == False:
         print(f"The Gregorian calander is: {ec_day}/{ec_month}/{ec_year}")
 else:
-    print("Invalid choice. Please select 1 or 2.")
+    print(f"{calander} is Invalid choice. Please select A or B.")
         
