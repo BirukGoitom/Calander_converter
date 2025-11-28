@@ -131,9 +131,7 @@ if calander == "A":
             ec_day += 30
     if flag == False:
         print(f"The Ethiopian calander is: {ec_day}/{ec_month}/{ec_year}")
-    else:
-        print(f"{ gc_input} is an invalid Gregorian date. please Enter the Gregorian date in this format day/month/year")
-   
+    
 #EC to GC conversion
 
 elif calander == "B":
@@ -261,8 +259,6 @@ elif calander == "B":
         gc_day = ec_day + 5
     if flag == False:
         print(f"The Gregorian calander is: {gc_day}/{gc_month}/{gc_year}")
-    else:
-        print(f"{ ec_input} is an invalid Ethiopian date. please Enter the Ethiopian date in this format day/month/year")
 
 else:
     print(f"{calander} is Invalid choice. Please select A or B.")
