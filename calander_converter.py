@@ -6,7 +6,7 @@ flag = False
 
 
 #GC to EC conversion
-if calander == "A":
+if calander == "A" or "a":
     gc_input = input("Enter the Gregorian date in this format day/month/year: ")
 
     # Split the date into day, month, year
@@ -134,7 +134,7 @@ if calander == "A":
     
 #EC to GC conversion
 
-elif calander == "B":
+elif calander == "B" and "b":
     ec_input = input("Enter the Ethiopian date in this format day/month/year: ")
 
     # Split the date
