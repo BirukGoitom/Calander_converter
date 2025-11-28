@@ -7,7 +7,7 @@ flag = False
 
 #GC to EC conversion
 if calander == "A":
-    gc_input = input("Enter the Gregorian date in this format dd/mm/yyyy: ")
+    gc_input = input("Enter the Gregorian date in this format day/month/year: ")
 
     # Split the date into day, month, year
     gc_day, gc_month, gc_year = gc_input.split("/")
@@ -131,11 +131,13 @@ if calander == "A":
             ec_day += 30
     if flag == False:
         print(f"The Ethiopian calander is: {ec_day}/{ec_month}/{ec_year}")
-
+    else:
+        print(f"{ gc_input} is an invalid Gregorian date. please Enter the Gregorian date in this format day/month/year")
+   
 #EC to GC conversion
 
 elif calander == "B":
-    ec_input = input("Enter the Ethiopian date in this format dd/mm/yyyy: ")
+    ec_input = input("Enter the Ethiopian date in this format day/month/year: ")
 
     # Split the date
     ec_day, ec_month, ec_year = ec_input.split("/")
@@ -258,7 +260,10 @@ elif calander == "B":
     elif ec_month == 13:
         gc_day = ec_day + 5
     if flag == False:
-        print(f"The Gregorian calander is: {ec_day}/{ec_month}/{ec_year}")
+        print(f"The Gregorian calander is: {gc_day}/{gc_month}/{gc_year}")
+    else:
+        print(f"{ ec_input} is an invalid Ethiopian date. please Enter the Ethiopian date in this format day/month/year")
+
 else:
     print(f"{calander} is Invalid choice. Please select A or B.")
         
